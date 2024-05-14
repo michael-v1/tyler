@@ -1,0 +1,323 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    position: relative;
+    overflow-x: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 7.5rem;
+    background-color: black;
+    position: fixed;
+    width: calc(100vw - 15rem);
+    z-index: 2;
+}
+@media screen and (min-width:976px) {
+    .leftNav{
+        gap: 8px;
+    }
+}
+
+
+
+@media screen and (max-width:976px) {
+    nav{
+        padding: .5rem 1rem;
+        width: calc(100vw - 2rem);
+        left: 0;
+        top: 0;
+    }
+}
+
+.leftNav{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 3px;
+}
+
+.leftNav a{
+    text-decoration: none;
+}
+
+nav a{
+    border-radius: 50%;
+}
+
+nav a img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+nav h1{
+    color: white;
+}
+
+.navlinks{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    list-style: none;
+    flex-flow: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.navlinks li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+.navlinks li a::before{
+    position: absolute;
+    bottom: -10px;
+    content: "";
+    transition-duration: 250ms;
+    background-color: transparent;
+    width: 100%;
+    height: 3px;
+}
+
+.navlinks li a:hover::before{
+    bottom: -5px;
+    background-color: white;
+}
+
+@media screen and (min-width:976px) {
+    .navlinks{
+        gap: 2rem;
+    }
+
+    #toggleIcon{
+        display: none;
+    }
+
+    #dropDown{
+        display: none;
+    }
+}
+
+@media screen and (max-width:976px){
+
+    #toggleIcon{
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: sticky;
+        z-index: 3;
+        cursor: pointer;
+    }
+
+    .line{
+        width: 100%;
+        height: .25rem;
+        background-color: white;
+        border-radius: 15px;
+    }
+
+    .navlinks{
+        display: none;
+    }
+
+}
+
+#dropDown{
+    position: fixed;
+    width: fit-content;
+    height: calc(100vh - 7.5rem);
+    transform: translateX(-75vw);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 5vw;
+    gap: 2.5rem;
+    padding: 0rem 4rem;
+    padding-top: 7.5rem;
+    background-color: black;
+    z-index: 2;
+    list-style: none;
+    transition: all ease-in 500ms;
+}
+
+#dropDown.active{
+    transform: translateX(0);
+}
+
+#dropDown li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+main{
+    position: relative;
+}
+    main{
+        padding-top: 4.4rem;
+    }
+
+
+.imgGradient{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.tyler{
+    background-image: linear-gradient(black 50%, transparent 50%);
+}
+
+    .gradient{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: .6;
+        background-image: linear-gradient(to right, black 50%, transparent);
+    }
+
+.authorIntro{    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    width: fit-content;
+   margin: 0 auto;
+}
+
+.authorIntro h2{
+    font-size: 4vw;
+}
+
+.authorIntro h1{
+    font-size: 9vw;
+}
+
+.authorIntro p{
+    font-size: 1.75vw;
+}
+
+@media screen and (max-width:976px) {
+    .authorIntro p{
+        font-size: 2.5vw;
+    }
+}
+
+#albumsh2{
+    width: fit-content;
+    margin: auto;
+    padding: 2rem 0;
+    font-size: 50px;
+    text-align: center;
+}
+
+.albums{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    gap: 1rem;
+}
+
+.albums a{
+    text-decoration: none;
+    color: black;
+    transition: all 300ms ease-in-out;
+}
+
+.albums a:hover{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.album{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.album img{
+    width: 250px;
+    height: 250px;
+}
+
+.album h4{
+    font-size: 20px;
+}
+
+.album h3{
+    font-size: 30px;
+}
+
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem 0rem;
+    margin-top: 2rem;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    list-style: none;
+    flex-flow: wrap;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+@media screen and (min-width:976px) {
+    footer ul{
+        width: 50vw;
+    }
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+footer ul li a::before{
+    position: absolute;
+    content: "";
+    background-color: transparent;
+    width: 100%;
+    height: 3px;
+    bottom: -10px;
+    transition-duration: 250ms;
+}
+
+footer ul li a:hover::before{
+    bottom: -5px;
+    background-color: white;
+}
+
+
+
