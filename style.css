@@ -203,6 +203,17 @@ main{
     width: fit-content;
    margin: 0 auto;
 }
+@media screen and (max-width:976px) {
+    .authorIntro{
+        top: 20px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .authorIntro{
+        top: 30px;
+    }
+}
 
 .authorIntro h2{
     font-size: 4vw;
@@ -218,7 +229,15 @@ main{
 
 @media screen and (max-width:976px) {
     .authorIntro p{
-        font-size: 2.5vw;
+        font-size: 4.5vw;
+    }
+
+    .authorIntro h1{
+        font-size: 10vw;
+    }
+
+    .authorIntro p{
+        font-size: 3.5vw;
     }
 }
 
