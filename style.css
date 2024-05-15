@@ -249,6 +249,12 @@ main{
     text-align: center;
 }
 
+@media screen and (max-width:976px) {
+    #albumsh2{
+        font-size: 35px;
+    }
+}
+
 .albums{
     display: flex;
     flex-flow: wrap;
